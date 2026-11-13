@@ -155,9 +155,9 @@ export default function QuestionCard({ q, source, onDone }: { q: Question; sourc
       </strong>
 
       <span
-        dir="auto"
+        dir="rtl"
         style={{
-          unicodeBidi: "plaintext",
+          unicodeBidi: "isolate",
           display: "block",
           flex: 1,
           whiteSpace: "pre-wrap",
