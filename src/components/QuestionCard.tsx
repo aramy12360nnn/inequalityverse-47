@@ -141,9 +141,28 @@ export default function QuestionCard({ q, source, onDone }: { q: Question; sourc
       {sol && settings.solutions && (
         <div className="sol-box">
           <div className="font-bold mb-2">طريقة الحل الصحيحة:</div>
-          <ol className="space-y-1">
-            {q.steps.map((s, i) => <li key={i} className="step-line" style={{ animationDelay: `${i * 0.15}s` }}><b>{ar(i + 1)}.</b> {s}</li>)}
-          </ol>
+          <ol className="space-y-1"> 
+<ol className="space-y-1">
+  {q.steps.map((s, i) => (
+    <li key={i} className="step-line">
+      <b>{ar(i + 1)}.</b>
+      <span
+        dir="ltr"
+        style={{
+          direction: "ltr",
+          unicodeBidi: "isolate",
+          display: "inline-block",
+          textAlign: "center",
+          whiteSpace: "pre-wrap",
+        }}
+      >
+        {s}
+      </span>
+    </li>
+  ))}
+</ol>
+
+      
         </div>
       )}
     </div>
