@@ -142,26 +142,35 @@ export default function QuestionCard({ q, source, onDone }: { q: Question; sourc
         <div className="sol-box">
           <div className="font-bold mb-2">طريقة الحل الصحيحة:</div>
            
+
 <ol className="space-y-1">
-  
-{q.steps.map((s, i) => (
-  <li key={i} className="step-line">
-    <b>{ar(i + 1)}.</b>
-    <span
-      dir="auto"
-      style={{
-        unicodeBidi: "plaintext",
-        display: "inline-block",
-        maxWidth: "100%",
-        whiteSpace: "pre-wrap",
-        textAlign: "start",
-      }}
-    >
-      {s}
-    </span>
-  </li>
-))}
+  {q.steps.map((s, i) => (
+    <li key={i} className="step-line">
+      <b>{ar(i + 1)}.</b>
+      <span
+        dir="auto"
+        style={{
+          unicodeBidi: "plaintext",
+          display: "inline-block",
+          maxWidth: "100%",
+          whiteSpace: "pre-wrap",
+          textAlign: "start",
+        }}
+      >
+        {s}
+      </span>
+    </li>
+  ))}
 </ol>
+      </div>
+    )}
+  </div>
+);
+}
+
+  
+
+
     
       
         
