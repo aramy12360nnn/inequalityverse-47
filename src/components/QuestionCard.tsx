@@ -143,18 +143,27 @@ export default function QuestionCard({ q, source, onDone }: { q: Question; sourc
           <div className="font-bold mb-2">طريقة الحل الصحيحة:</div>
            
 
-<ol className="space-y-1">
+
+<ol className="space-y-3" dir="rtl">
   {q.steps.map((s, i) => (
-    <li key={i} className="step-line">
-      <b>{ar(i + 1)}.</b>
+    <li
+      key={i}
+      className="step-line flex items-start gap-3"
+    >
+      <strong className="shrink-0">
+        {ar(i + 1)}.
+      </strong>
+
       <span
         dir="auto"
         style={{
           unicodeBidi: "plaintext",
-          display: "inline-block",
-          maxWidth: "100%",
+          display: "block",
+          flex: 1,
           whiteSpace: "pre-wrap",
+          overflowWrap: "anywhere",
           textAlign: "start",
+          lineHeight: 1.9,
         }}
       >
         {s}
@@ -162,6 +171,8 @@ export default function QuestionCard({ q, source, onDone }: { q: Question; sourc
     </li>
   ))}
 </ol>
+
+  
       </div>
     )}
   </div>
