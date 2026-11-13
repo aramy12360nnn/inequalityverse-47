@@ -155,7 +155,7 @@ export default function QuestionCard({ q, source, onDone }: { q: Question; sourc
       </strong>
 
       <span
-        dir="rtl"
+        dir="auto"
         style={{
           unicodeBidi: "isolate",
           display: "block",
